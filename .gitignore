@@ -1,0 +1,49 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Custom
+*.elf
+*.cpp.d
+*.lss
+*.map
+*.srec
+*.buildinfo
+*.vmps
+*.bin
+*.suo
+*.log
+*.tlog
+*.xml
+
+
+# Directories
+SAMD21_SD_Boot/SAMD21_SD_Boot/Debug/
+SAMD21_SD_Boot/SAMD21_SD_Boot/Release/
+
+*.filters
