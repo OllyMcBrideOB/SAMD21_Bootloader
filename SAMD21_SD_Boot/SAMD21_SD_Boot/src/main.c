@@ -46,6 +46,18 @@ int main(void)
 	
 	system_init();
 	
+	struct port_config my_config;
+	my_config.direction = PORT_PIN_DIR_OUTPUT;
+	port_pin_set_config(PIN_PA15, &my_config);
+
+	while(1)
+	{
+		port_pin_set_output_level(PIN_PA15, true);
+		delay_ms(500);
+		port_pin_set_output_level(PIN_PA15, false);
+		delay_ms(300);
+	}
+	
 	
 	return true;
 }
