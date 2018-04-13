@@ -79,7 +79,6 @@ int main (void)
  */
 static void sd_mmc_ready() 
 {
-	
 	printf("Waiting for SD card to be present...\n");
 	delay_ms(100);
 	

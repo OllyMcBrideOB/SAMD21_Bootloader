@@ -82,7 +82,7 @@
 
 #  define SD_MMC_CS                  0
 
-#  define SD_MMC_0_CD_GPIO           0
+//#  define SD_MMC_0_CD_GPIO           0
 #  define SD_MMC_0_CD_DETECT_VALUE   0
 #endif
 
