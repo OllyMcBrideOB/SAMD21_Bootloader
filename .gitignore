@@ -43,7 +43,7 @@
 
 
 # Directories
-SAMD21_SD_Boot/SAMD21_SD_Boot/Debug/
-SAMD21_SD_Boot/SAMD21_SD_Boot/Release/
+SAMD21_SD_Bootloader/Debug/
+SAMD21_SD_Bootloader/Release/
 
 *.filters

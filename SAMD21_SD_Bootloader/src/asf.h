@@ -107,4 +107,13 @@
 // From module: USART - Serial interface- SAM implementation for devices with only USART
 #include <serial.h>
 
+
+
+
+
+
+
+// UART & stdio functions
+#include "uart.h"
+
 #endif // ASF_H
