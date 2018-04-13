@@ -114,5 +114,15 @@ void system_init(void)
 		
 	/* Initialise delay */
 	delay_init();
+	
+	irq_initialize_vectors();
+	cpu_irq_enable();
+
+	/* Initialize SD MMC stack */
+	sd_mmc_init();
+		
+	struct nvm_config config;
+	nvm_get_config_defaults(&config);
+	nvm_set_config(&config);
 }
 

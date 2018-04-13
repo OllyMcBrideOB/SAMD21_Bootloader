@@ -86,9 +86,9 @@
 // From module: Part identification macros
 #include <parts.h>
 
-// From module: RTC - Real Time Counter in Count Mode (Callback APIs)
-#include <rtc_count.h>
-#include <rtc_count_interrupt.h>
+// From module: RTC - Real Time Counter in Calendar Mode (Callback APIs)
+#include <rtc_calendar.h>
+#include <rtc_calendar_interrupt.h>
 #include <rtc_tamper.h>
 
 // From module: SD/MMC Memory Control Access - Enable
@@ -136,5 +136,10 @@
 
 // From module: USART - Serial interface- SAM implementation for devices with only USART
 #include <serial.h>
+
+
+
+
+#include "uart.h"
 
 #endif // ASF_H

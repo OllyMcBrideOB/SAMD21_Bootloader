@@ -30,13 +30,13 @@
       <framework-data>
   <options>
     <option id="common.boards" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="common2.components.memory.sd_mmc" value="Add" config="spi" content-id="Atmel.ASF" />
     <option id="common2.services.delay" value="Add" config="systick" content-id="Atmel.ASF" />
+    <option id="sam0.drivers.nvm" value="Add" config="" content-id="Atmel.ASF" />
     <option id="sam0.drivers.port" value="Add" config="" content-id="Atmel.ASF" />
     <option id="sam0.drivers.sercom.usart" value="Add" config="callback" content-id="Atmel.ASF" />
     <option id="sam0.drivers.system" value="Add" config="" content-id="Atmel.ASF" />
     <option id="sam0.utils.stdio.stdio_serial" value="Add" config="" content-id="Atmel.ASF" />
-    <option id="common2.components.memory.sd_mmc" value="Add" config="spi" content-id="Atmel.ASF" />
-    <option id="sam0.drivers.nvm" value="Add" config="" content-id="Atmel.ASF" />
     <option id="common.services.fs.fatfs" value="Add" config="" content-id="Atmel.ASF" />
     <option id="sam0.utils.linker_scripts" value="Add" config="" content-id="Atmel.ASF" />
   </options>
@@ -44,7 +44,7 @@
     <configuration key="config.common2.components.memory.sd_mmc.ctrl_access" value="enable" default="disable" content-id="Atmel.ASF" />
     <configuration key="config.sam0.drivers.sercom.spi" value="callback" default="callback" content-id="Atmel.ASF" />
     <configuration key="config.common.services.fs.fatfs.codepage" value="sbcs" default="sbcs" content-id="Atmel.ASF" />
-    <configuration key="config.sam0.drivers.rtc" value="count_callback" default="count_callback" content-id="Atmel.ASF" />
+    <configuration key="config.sam0.drivers.rtc" value="calendar_callback" default="count_callback" content-id="Atmel.ASF" />
   </configurations>
   <files>
     <file path="src/main.c" framework="" version="" source="common2/applications/user_application/main.c" changed="False" content-id="Atmel.ASF" />
@@ -239,6 +239,24 @@
     <file path="src/ASF/sam0/drivers/nvm/nvm.c" framework="" version="3.34.2" source="sam0\drivers\nvm\nvm.c" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/sam0/drivers/nvm/quick_start_basic/qs_nvm_basic.h" framework="" version="3.34.2" source="sam0\drivers\nvm\quick_start_basic\qs_nvm_basic.h" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/sam0/drivers/nvm/nvm.h" framework="" version="3.34.2" source="sam0\drivers\nvm\nvm.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc_mem.c" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc_mem.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc_mem.h" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc_mem.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc.c" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.c" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc_spi.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc.h" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.h" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc_spi.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/Config/conf_sd_mmc.h" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\module_config_spi\conf_sd_mmc.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc_protocol.h" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc_protocol.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/sercom/spi/spi_interrupt.c" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\spi_interrupt.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/sercom/spi/spi.c" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\spi.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/sercom/spi/quick_start_dma/qs_spi_dma_use.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\quick_start_dma\qs_spi_dma_use.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/sercom/spi/spi_interrupt.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\spi_interrupt.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/sercom/spi/quick_start_master_callback/qs_spi_master_callback.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\quick_start_master_callback\qs_spi_master_callback.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/sercom/spi/spi.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\spi.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/sercom/spi/quick_start_slave/qs_spi_slave_basic.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\quick_start_slave\qs_spi_slave_basic.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/sercom/spi/quick_start_slave_callback/qs_spi_slave_callback.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\quick_start_slave_callback\qs_spi_slave_callback.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/sercom/spi/quick_start_master/qs_spi_master_basic.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\quick_start_master\qs_spi_master_basic.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/Config/conf_spi.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\module_config\conf_spi.h" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/thirdparty/fatfs/fatfs-r0.09/src/ff.c" framework="" version="3.34.2" source="thirdparty\fatfs\fatfs-r0.09\src\ff.c" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/thirdparty/fatfs/fatfs-r0.09/doc/00index_e.html" framework="" version="3.34.2" source="thirdparty\fatfs\fatfs-r0.09\doc\00index_e.html" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/thirdparty/fatfs/fatfs-r0.09/doc/00index_j.html" framework="" version="3.34.2" source="thirdparty\fatfs\fatfs-r0.09\doc\00index_j.html" changed="False" content-id="Atmel.ASF" />
@@ -306,29 +324,11 @@
     <file path="src/ASF/thirdparty/fatfs/fatfs-r0.09/src/diskio.h" framework="" version="3.34.2" source="thirdparty\fatfs\fatfs-r0.09\src\diskio.h" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/thirdparty/fatfs/fatfs-r0.09/src/ff.h" framework="" version="3.34.2" source="thirdparty\fatfs\fatfs-r0.09\src\ff.h" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/thirdparty/fatfs/fatfs-r0.09/src/integer.h" framework="" version="3.34.2" source="thirdparty\fatfs\fatfs-r0.09\src\integer.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc_mem.c" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc_mem.c" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc_mem.h" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc_mem.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc.c" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc.c" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.c" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc_spi.c" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc.h" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc_spi.h" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc_spi.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/Config/conf_sd_mmc.h" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\module_config_spi\conf_sd_mmc.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/common2/components/memory/sd_mmc/sd_mmc_protocol.h" framework="" version="3.34.2" source="common2\components\memory\sd_mmc\sd_mmc_protocol.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/rtc/rtc_count.h" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_count.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/rtc/rtc_count_interrupt.h" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_count_interrupt.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/rtc/rtc_calendar.h" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_calendar.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/rtc/rtc_calendar_interrupt.h" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_calendar_interrupt.h" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/sam0/drivers/rtc/rtc_tamper.h" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_tamper.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h/rtc_count.c" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count.c" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h/rtc_count_interrupt.c" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count_interrupt.c" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/sercom/spi/spi_interrupt.c" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\spi_interrupt.c" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/sercom/spi/spi.c" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\spi.c" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/sercom/spi/quick_start_dma/qs_spi_dma_use.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\quick_start_dma\qs_spi_dma_use.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/sercom/spi/spi_interrupt.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\spi_interrupt.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/sercom/spi/quick_start_master_callback/qs_spi_master_callback.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\quick_start_master_callback\qs_spi_master_callback.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/sercom/spi/spi.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\spi.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/sercom/spi/quick_start_slave/qs_spi_slave_basic.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\quick_start_slave\qs_spi_slave_basic.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/sercom/spi/quick_start_slave_callback/qs_spi_slave_callback.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\quick_start_slave_callback\qs_spi_slave_callback.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/ASF/sam0/drivers/sercom/spi/quick_start_master/qs_spi_master_basic.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\quick_start_master\qs_spi_master_basic.h" changed="False" content-id="Atmel.ASF" />
-    <file path="src/Config/conf_spi.h" framework="" version="3.34.2" source="sam0\drivers\sercom\spi\module_config\conf_spi.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h/rtc_calendar.c" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_sam_d_r_h\rtc_calendar.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h/rtc_calendar_interrupt.c" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_sam_d_r_h\rtc_calendar_interrupt.c" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/thirdparty/fatfs/fatfs-port-r0.09/sam0/fattime_rtc.c" framework="" version="3.34.2" source="thirdparty\fatfs\fatfs-port-r0.09\sam0\fattime_rtc.c" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/thirdparty/fatfs/fatfs-port-r0.09/diskio.c" framework="" version="3.34.2" source="thirdparty\fatfs\fatfs-port-r0.09\diskio.c" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/thirdparty/fatfs/fatfs-r0.09/src/option/ccsbcs.c" framework="" version="3.34.2" source="thirdparty\fatfs\fatfs-r0.09\src\option\ccsbcs.c" changed="False" content-id="Atmel.ASF" />
@@ -376,8 +376,8 @@
       <Value>SYSTICK_MODE</Value>
       <Value>USART_CALLBACK_MODE=true</Value>
       <Value>SD_MMC_ENABLE</Value>
-      <Value>RTC_COUNT_ASYNC=true</Value>
       <Value>SPI_CALLBACK_MODE=true</Value>
+      <Value>RTC_CALENDAR_ASYNC=true</Value>
     </ListValues>
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
@@ -413,11 +413,11 @@
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
       <Value>../src/ASF/common/services/storage/ctrl_access</Value>
       <Value>../src/ASF/sam0/drivers/nvm</Value>
-      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/common2/components/memory/sd_mmc</Value>
+      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
+      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/sam0/drivers/rtc</Value>
       <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
-      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
       <Value>../src/ASF/thirdparty/fatfs/fatfs-port-r0.09/sam0</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
@@ -473,15 +473,15 @@
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
       <Value>../src/ASF/common/services/storage/ctrl_access</Value>
       <Value>../src/ASF/sam0/drivers/nvm</Value>
-      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/common2/components/memory/sd_mmc</Value>
+      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
+      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/sam0/drivers/rtc</Value>
       <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
-      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
       <Value>../src/ASF/thirdparty/fatfs/fatfs-port-r0.09/sam0</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
-  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=USER_BOARD -DSYSTICK_MODE -DUSART_CALLBACK_MODE=true -DSD_MMC_ENABLE -DRTC_COUNT_ASYNC=true -DSPI_CALLBACK_MODE=true</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=USER_BOARD -DSYSTICK_MODE -DUSART_CALLBACK_MODE=true -DSD_MMC_ENABLE -DSPI_CALLBACK_MODE=true -DRTC_CALENDAR_ASYNC=true</armgcc.preprocessingassembler.general.AssemblerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>../src/ASF/common/boards</Value>
@@ -515,11 +515,11 @@
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
       <Value>../src/ASF/common/services/storage/ctrl_access</Value>
       <Value>../src/ASF/sam0/drivers/nvm</Value>
-      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/common2/components/memory/sd_mmc</Value>
+      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
+      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/sam0/drivers/rtc</Value>
       <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
-      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
       <Value>../src/ASF/thirdparty/fatfs/fatfs-port-r0.09/sam0</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
@@ -542,8 +542,8 @@
       <Value>SYSTICK_MODE</Value>
       <Value>USART_CALLBACK_MODE=true</Value>
       <Value>SD_MMC_ENABLE</Value>
-      <Value>RTC_COUNT_ASYNC=true</Value>
       <Value>SPI_CALLBACK_MODE=true</Value>
+      <Value>RTC_CALENDAR_ASYNC=true</Value>
     </ListValues>
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
@@ -580,11 +580,11 @@
       <Value>../incl</Value>
       <Value>../src/ASF/common/services/storage/ctrl_access</Value>
       <Value>../src/ASF/sam0/drivers/nvm</Value>
-      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/common2/components/memory/sd_mmc</Value>
+      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
+      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/sam0/drivers/rtc</Value>
       <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
-      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
       <Value>../src/ASF/thirdparty/fatfs/fatfs-port-r0.09/sam0</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
@@ -642,16 +642,16 @@
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
       <Value>../src/ASF/common/services/storage/ctrl_access</Value>
       <Value>../src/ASF/sam0/drivers/nvm</Value>
-      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/common2/components/memory/sd_mmc</Value>
+      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
+      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/sam0/drivers/rtc</Value>
       <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
-      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
       <Value>../src/ASF/thirdparty/fatfs/fatfs-port-r0.09/sam0</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
   <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
-  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=USER_BOARD -DSYSTICK_MODE -DUSART_CALLBACK_MODE=true -DSD_MMC_ENABLE -DRTC_COUNT_ASYNC=true -DSPI_CALLBACK_MODE=true</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=USER_BOARD -DSYSTICK_MODE -DUSART_CALLBACK_MODE=true -DSD_MMC_ENABLE -DSPI_CALLBACK_MODE=true -DRTC_CALENDAR_ASYNC=true</armgcc.preprocessingassembler.general.AssemblerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>../src/ASF/common/boards</Value>
@@ -685,11 +685,11 @@
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
       <Value>../src/ASF/common/services/storage/ctrl_access</Value>
       <Value>../src/ASF/sam0/drivers/nvm</Value>
-      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/common2/components/memory/sd_mmc</Value>
+      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
+      <Value>../src/ASF/thirdparty/fatfs/fatfs-r0.09/src</Value>
       <Value>../src/ASF/sam0/drivers/rtc</Value>
       <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
-      <Value>../src/ASF/sam0/drivers/sercom/spi</Value>
       <Value>../src/ASF/thirdparty/fatfs/fatfs-port-r0.09/sam0</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
@@ -825,19 +825,19 @@
     <None Include="src\ASF\sam0\drivers\nvm\nvm.h">
       <SubType>compile</SubType>
     </None>
-    <None Include="src\ASF\sam0\drivers\rtc\rtc_count.h">
+    <None Include="src\ASF\sam0\drivers\rtc\rtc_calendar.h">
       <SubType>compile</SubType>
     </None>
-    <None Include="src\ASF\sam0\drivers\rtc\rtc_count_interrupt.h">
+    <None Include="src\ASF\sam0\drivers\rtc\rtc_calendar_interrupt.h">
       <SubType>compile</SubType>
     </None>
     <None Include="src\ASF\sam0\drivers\rtc\rtc_tamper.h">
       <SubType>compile</SubType>
     </None>
-    <Compile Include="src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count.c">
+    <Compile Include="src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_calendar.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count_interrupt.c">
+    <Compile Include="src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_calendar_interrupt.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\ASF\sam0\drivers\sercom\sercom.c">
@@ -1065,6 +1065,12 @@
     <None Include="src\config\conf_access.h">
       <SubType>compile</SubType>
     </None>
+    <None Include="src\config\conf_sd_mmc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\config\conf_spi.h">
+      <SubType>compile</SubType>
+    </None>
     <None Include="src\ASF\thirdparty\fatfs\fatfs-r0.09\src\diskio.h">
       <SubType>compile</SubType>
     </None>
@@ -1084,12 +1090,6 @@
       <SubType>compile</SubType>
     </None>
     <None Include="src\ASF\thirdparty\fatfs\fatfs-r0.09\src\integer.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\config\conf_sd_mmc.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\config\conf_spi.h">
       <SubType>compile</SubType>
     </None>
     <Compile Include="src\ASF\thirdparty\fatfs\fatfs-r0.09\src\option\ccsbcs.c">

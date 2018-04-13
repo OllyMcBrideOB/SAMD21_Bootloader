@@ -1,7 +1,7 @@
 /**
  * \file
  *
- * \brief SAM RTC Driver (Count Interrupt Mode)
+ * \brief SAM RTC Driver (Calendar Interrupt Mode)
  *
  * Copyright (C) 2013-2015 Atmel Corporation. All rights reserved.
  *
@@ -44,17 +44,17 @@
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
 
-#ifndef RTC_COUNT_INTERRUPT_H_INCLUDED
-#define RTC_COUNT_INTERRUPT_H_INCLUDED
+#ifndef RTC_CALENDAR_INTERRUPT_H_INCLUDED
+#define RTC_CALENDAR_INTERRUPT_H_INCLUDED
 
-#include "rtc_count.h"
+#include "rtc_calendar.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /**
- * \addtogroup asfdoc_sam0_rtc_count_group
+ * \addtogroup asfdoc_sam0_rtc_calendar_group
  * @{
  */
 
@@ -62,29 +62,28 @@ extern "C" {
  * \name Callbacks
  * @{
  */
-enum status_code rtc_count_register_callback(
+enum status_code rtc_calendar_register_callback(
 		struct rtc_module *const module,
-		rtc_count_callback_t callback,
-		enum rtc_count_callback callback_type);
+		rtc_calendar_callback_t callback,
+		enum rtc_calendar_callback callback_type);
 
-enum status_code rtc_count_unregister_callback(
+enum status_code rtc_calendar_unregister_callback(
 		struct rtc_module *const module,
-		enum rtc_count_callback callback_type);
+		enum rtc_calendar_callback callback_type);
 
-void rtc_count_enable_callback(
+void rtc_calendar_enable_callback(
 		struct rtc_module *const module,
-		enum rtc_count_callback callback_type);
+		enum rtc_calendar_callback callback_type);
 
-void rtc_count_disable_callback(
-		struct rtc_module *const module,
-		enum rtc_count_callback callback_type);
+void rtc_calendar_disable_callback(
+	struct rtc_module *const module,
+	enum rtc_calendar_callback callback_type);
 
 /** @} */
-
 /** @} */
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* RTC_COUNT_INTERRUPT_H_INCLUDED */
+#endif /* RTC_CALENDAR_INTERRUPT_H_INCLUDED */
