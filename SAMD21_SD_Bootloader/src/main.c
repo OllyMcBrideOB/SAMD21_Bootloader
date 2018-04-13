@@ -32,20 +32,19 @@
 int main (void)
 {
 	system_init();
+	printf("System initialised successfully");
 
 	/* Insert application code here, after the board has been initialized. */
 	
 	
-	struct port_config config;
-	config.direction = PORT_PIN_DIR_INPUT;
-	port_pin_set_config(PIN_PA02, &config);
+
 	
 	
 	while(1)
 	{
-		printf("tick %d \n", port_pin_get_input_level(PIN_PA02));
+		printf("tick %d \n", readButton());
 		delay_ms(1000);
-		printf("tock %d \n", port_pin_get_input_level(PIN_PA02));
+		printf("tock %d \n", readButton());
 		delay_ms(1000);
 	}
 }

@@ -46,7 +46,7 @@ void configure_usart(void)
 	usart_enable(&usart_instance);
 	
 	
-	stdio_serial_init(&usart_instance, SERCOM3, &usart_instance);
+	stdio_serial_init(&usart_instance, SERCOM3, &config_usart);
 }
 
 

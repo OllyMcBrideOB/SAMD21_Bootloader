@@ -786,6 +786,9 @@
     <Folder Include="src\config\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="incl\button.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="incl\uart.h">
       <SubType>compile</SubType>
     </Compile>
@@ -1098,6 +1101,9 @@
     <None Include="src\config\conf_fatfs.h">
       <SubType>compile</SubType>
     </None>
+    <Compile Include="src\button.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\uart.c">
       <SubType>compile</SubType>
     </Compile>

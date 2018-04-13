@@ -111,6 +111,9 @@ void system_init(void)
 	
 	/* Initialise UART & stdio */
 	system_usart_init();
+	
+	/* Initialise button */
+	system_button_init();
 		
 	/* Initialise delay */
 	delay_init();
