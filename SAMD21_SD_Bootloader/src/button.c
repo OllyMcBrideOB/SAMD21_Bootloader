@@ -19,5 +19,5 @@ void system_button_init(void)
 
 bool readButton(void)
 {
-	port_pin_get_input_level(BUTTON_PIN);
+	return port_pin_get_input_level(BUTTON_PIN);
 }
