@@ -117,7 +117,7 @@ void system_init(void)
 		
 	/* Initialise delay */
 	delay_init();
-	
+		
 	irq_initialize_vectors();
 	cpu_irq_enable();
 

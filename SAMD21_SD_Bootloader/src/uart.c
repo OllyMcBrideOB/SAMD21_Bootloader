@@ -38,8 +38,8 @@ void configure_usart(void)
 	config_usart.mux_setting = USART_RX_1_TX_0_XCK_1;
 	config_usart.pinmux_pad0 = PINMUX_UNUSED;
 	config_usart.pinmux_pad1 = PINMUX_UNUSED;
-	config_usart.pinmux_pad2 = PINMUX_PA22C_SERCOM3_PAD0;
-	config_usart.pinmux_pad3 = PINMUX_PA23C_SERCOM3_PAD1;
+	config_usart.pinmux_pad2 = PINMUX_PA22C_SERCOM3_PAD0;		// Tx PA22 (HU PCB SDA)
+	config_usart.pinmux_pad3 = PINMUX_PA23C_SERCOM3_PAD1;		// Rx PA23 (HU PCB SCL)
 	while (usart_init(&usart_instance,
 	SERCOM3, &config_usart) != STATUS_OK) {
 	}

@@ -29,7 +29,7 @@
  */
 #include <asf.h>
 
-static void sd_mmc_ready() ;
+static void sd_mmc_ready(void);
 
 int main (void)
 {
@@ -77,7 +77,7 @@ int main (void)
  * This function will wait, indefinitely till SD card is ready for access.
  *  
  */
-static void sd_mmc_ready() 
+static void sd_mmc_ready(void) 
 {
 	printf("Waiting for SD card to be present...\n");
 	delay_ms(100);

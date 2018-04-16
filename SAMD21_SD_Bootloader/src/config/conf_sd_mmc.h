@@ -54,7 +54,7 @@
 //#define SDIO_SUPPORT_ENABLE
 
 /* Define to enable the debug trace to the current standard output (stdio) */
-//#define SD_MMC_DEBUG
+#define SD_MMC_DEBUG
 
 /* Define to memory count */
 #define SD_MMC_SPI_MEM_CNT          1
@@ -76,14 +76,14 @@
 #  define SD_MMC_SPI                 SERCOM4
 #  define SD_MMC_SPI_PINMUX_SETTING  SPI_SIGNAL_MUX_SETTING_I	// SPI MUX combination I. DOPO: 0x2, DIPO: 0x0 */
 #  define SD_MMC_SPI_PINMUX_PAD0     PINMUX_PA12D_SERCOM4_PAD0	// MISO PA12 (DI)
-#  define SD_MMC_SPI_PINMUX_PAD1     PINMUX_PA13D_SERCOM4_PAD1	// CS	PA13
+#  define SD_MMC_SPI_PINMUX_PAD1     PINMUX_UNUSED					// PINMUX_PA13D_SERCOM4_PAD1	// CS	PA13
 #  define SD_MMC_SPI_PINMUX_PAD2     PINMUX_PB10D_SERCOM4_PAD2	// MOSI	PB10 (DO)
 #  define SD_MMC_SPI_PINMUX_PAD3     PINMUX_PB11D_SERCOM4_PAD3	// SCKPB11
 
-#  define SD_MMC_CS                  0
+#  define SD_MMC_CS                  (PIN_PA13)					// CS (PA13)
 
 //#  define SD_MMC_0_CD_GPIO           0
-#  define SD_MMC_0_CD_DETECT_VALUE   0
+//#  define SD_MMC_0_CD_DETECT_VALUE   0
 #endif
 
 /* Define the SPI clock source */
